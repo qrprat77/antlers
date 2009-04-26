@@ -6,7 +6,7 @@ module Antlers
 			it "should display an options menu" do
 				messenger = mock("messenger")
 				program = Program.new(messenger)
-				program.should_receive(:puts).with("Please make one of the following menu selections ")
+				messenger.should_receive(:puts).with("Please make one of the following menu selections ")
 				program.start
 			end
 		end
