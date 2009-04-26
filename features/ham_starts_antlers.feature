@@ -5,5 +5,5 @@ Feature: ham starts antlers
 	Scenario: start antlers
 		Given I am not yet designing an antenna
 		When I start the program
-		Then antlers should prompt "Make a choice:"
+		Then antlers should prompt "Please make one of the following menu selections "
 		
