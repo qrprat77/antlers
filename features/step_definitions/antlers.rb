@@ -8,5 +8,5 @@ When /^I start the program$/ do
 end
 
 Then /^antlers should prompt "(.*)"$/ do |message|
-	@messager.string.split("\n").should include(message)
+	@messenger.string.split("\n").should include(message)
 end

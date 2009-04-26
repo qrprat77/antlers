@@ -4,8 +4,8 @@ module Antlers
 			@messenger = messenger
 		end
 		def start
-  			@messenger.puts "Please make one of the following menu selections " #example as written from the RSPEC book, doesn't pass.
-			#puts "Please make one of the following menu selections " # This example passes
+			@messenger.puts 'This is ANTLERS! A  program for designing antennas for the ham radio operator written in ruby'
+  			@messenger.puts 'Please make one of the following menu selections '
 		end
 	end
 end
