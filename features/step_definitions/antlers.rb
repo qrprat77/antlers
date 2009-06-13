@@ -1,10 +1,13 @@
+def newantlers
+ @messenger=StringIO.new
+  @program = Antlers::Program.new(@messenger)
+  @program.start
+end
 Given /^I am not yet designing an antenna$/ do
 end
 
 When /^I start the program$/ do
-  @messenger = StringIO.new
-   program = Antlers::Program.new(@messenger)
-   program.start
+  newantlers
 end
 
 Then /^antlers should prompt "(.*)"$/ do |message|
@@ -12,9 +15,7 @@ Then /^antlers should prompt "(.*)"$/ do |message|
 end
 
 Given /^the program has started$/ do
-  @messenger=StringIO.new
-  program = Antlers::Program.new(@messenger)
-  program.start
+ 	newantlers
 end
 
 Then /^the ham should see a menu with various options$/ do #|menu|
