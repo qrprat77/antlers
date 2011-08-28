@@ -1,5 +1,5 @@
 def newantlers
- @messenger=StringIO.new
+  @messenger=StringIO.new
   @program = Antlers::Program.new(@messenger)
   @program.start
 end
@@ -18,11 +18,16 @@ Given /^the program has started$/ do
  	newantlers
 end
 
-Then /^the ham should see a menu with various options$/ do #|menu|
-	#@messenger.string.split("\n").should include(menu)
-  pending
+Given /^the menu is (.*)$/ do |menu|
+  newantlers
+  @messenger.string.split("\n").should include(menu) # express the regexp above with the code you wish you had
 end
 
-Then /^the ham should be able to enter an option from those choices$/ do
-  pending
+When /^I choose A$/ do
+  pending # express the regexp above with the code you wish you had
 end
+
+Then /^I should launch antlers$/ do
+  pending # express the regexp above with the code you wish you had
+end
+

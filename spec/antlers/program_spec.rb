@@ -13,8 +13,14 @@ module Antlers
 				@program.start
 			end
 			
-			it "should display an options menu" do
+			it "should display a prompt for an options menu" do
 				@messenger.should_receive(:puts).with("Please make one of the following menu selections ")
+				@program.start
+			end
+			
+			it "should give the main menu options" do
+				@program.current_menu.should_be(:main)
+				@messenger.should_receive(:puts).with(@program.current_menu.title)
 				@program.start
 			end
 		end
