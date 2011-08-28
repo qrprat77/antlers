@@ -18,9 +18,9 @@ module Antlers
 				@program.start
 			end
 			
-			it "should give the main menu options" do
-				@program.current_menu.should_be(:main)
-				@messenger.should_receive(:puts).with(@program.current_menu.title)
+			it "should give the current menu title as Main Menu" do
+				#pending
+				@messenger.should_receive(:puts).with("Main Menu")
 				@program.start
 			end
 		end
