@@ -20,14 +20,17 @@ end
 
 Given /^the menu is (.*)$/ do |menu|
   newantlers
-  @messenger.string.split("\n").should include(menu) # express the regexp above with the code you wish you had
+  @messenger.string.split("\n").should include(menu) 
 end
 
-When /^I choose A$/ do
-  pending # express the regexp above with the code you wish you had
+When /^I choose (.*)$/ do |choice|
+  newantlers
+  @messenger.string.split("\n").should include(choice)
+  #I should enter a selection, read from stdin
 end
 
-Then /^I should launch antlers$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^I should (.*)$/ do |action|
+  @messenger.string.split("\n").should include(action)
+  #Another activity should launch
 end
 

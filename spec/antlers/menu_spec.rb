@@ -10,6 +10,10 @@ module Antlers
 				@menu.title.should == "Title"
 			end
 			
+			it "should have a text file that establishes choices" do
+				@menu.txtfile.should == "title.txt"
+			end
+			
 		end #new menu context
 	
 	end #menu

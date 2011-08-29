@@ -11,6 +11,6 @@ Feature: ham makes a menu selection
 	Then I should <action>
 	
 Scenarios: main menu choice
-	| menu | choice |     action     |
-	| main |  A     | launch antlers |
-	| main |  Q     |  quit app      |
+	| menu     | choice |     action     |
+	| Main Menu|  A     | launch antlers |
+	| Main Menu|  Q     |  quit app      |
