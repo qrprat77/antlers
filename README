@@ -4,6 +4,15 @@ any antenna you know the equation for, and making the math simple.  Never
 worry about dulled pencils, or dead calculator batteries again!  Let antlers do 
 the work, and print out the results, it may amaze you!
 
-Antlers conceived, designed, and implimented by
+I have designed Antlers to 
+*create a custom solution focused on the needs of their particular radio
+ situation
+*Implement a cross platform system so as many hams as possible can use it
+ as easily as possible.
+*Help you build antennas!  The folumas that come default are formulas 
+ designed to help you build antennas.  If you want other formulas, you
+ are free to add them on your own, under your own menu settings.
+
+Antlers, designed, and implimented by
 G Brandon Hoyt KG4GVL
 Consider it liscensed under the MIT liscense, just like Ruby!
