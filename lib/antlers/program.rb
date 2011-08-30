@@ -7,12 +7,12 @@ module Antlers
 		def start
 			@messenger.puts 'This is ANTLERS! A  program for designing antennas for the ham radio operator written in ruby'
   			@messenger.puts 'Please make one of the following menu selections '
-  			@messenger.puts show_menu("Main Menu")
+  			show_menu("Main Menu")
 		end
 		
 		def show_menu(menu)
 			@current_menu = Antlers::Menu.new(menu)
-			@current_menu.title
+			@current_menu.display_menu(@messenger)
 		end
 	end
 end
