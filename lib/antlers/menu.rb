@@ -1,17 +1,20 @@
 module Antlers
 	class Menu
 		attr_accessor :title, :txtfile, :action_list
+		attr_reader :homedir
 		def initialize(title)
 			@title = title
 			@action_list = {}
-			@txtfile = @title.downcase.strip.gsub(" ", "") + ".txt"
+			@homedir = File.join(File.dirname(__FILE__), "/../txt_files/")
+			@txtfile = @homedir + @title.downcase.strip.gsub(" ", "") + ".txt"
+			
 		end
 		
-		def create_txt_file(home_dir)
-			@home_dir = home_dir
+		def display_menu(menu)
 			#test to see if the file exists in home dir
-			#if it does not exist, create it
-			#if it does exist, do not create, warn, and fail.
+			
+			#if it does not exist, warn, and fail.
+			#if it does exist, show the menu
 		end
 		
 	end
