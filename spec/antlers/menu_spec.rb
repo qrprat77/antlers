@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "/../spec_helper")
 module Antlers
 	describe Menu do
-		context "new Menu" do
+		context "create a new Menu" do
 			before (:each) do
 				@menu = Menu.new("Title")
 			end #before
@@ -10,9 +10,12 @@ module Antlers
 				@menu.title.should == "Title"
 			end
 			
-			it "should have a text file that establishes choices" do
+			it "should create a text file that establishes choices" do
 				@menu.txtfile.should == "title.txt"
+				
 			end
+			
+			
 			
 		end #new menu context
 	
