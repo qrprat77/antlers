@@ -10,9 +10,9 @@ module Antlers
 			
 		end
 		
-		def display_menu(menu)
+		def display_menu()
 			#test to see if the file exists in home dir
-			
+			return "#{self.txtfile} does not exist!" if !File.exist?(self.txtfile)			
 			#if it does not exist, warn, and fail.
 			#if it does exist, show the menu
 		end
