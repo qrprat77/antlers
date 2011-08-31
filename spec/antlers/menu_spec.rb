@@ -20,8 +20,9 @@ module Antlers
 			end
 			
 			it "should load the contents of the text file into the action list" do
-				@menu.display_menu(@messenger)
 				@menu.action_list.empty?.should == false
+				@menu.display_menu(@messenger)
+				
 			end
 			
 			

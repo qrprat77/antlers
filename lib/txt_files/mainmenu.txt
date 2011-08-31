@@ -1,2 +1,2 @@
-A,Calculate Dimensions for Antennas,menu
-Q,Quit Antlers,action
+A,Calculate Dimensions for Antennas,antennas,menu
+Q,Quit Antlers,quit,action
