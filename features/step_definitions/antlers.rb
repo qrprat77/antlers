@@ -21,14 +21,22 @@ end
 
 Given /^the menu is (.*)$/ do |menu|
   newantlers
-  @messenger.string.split("\n").should include(menu) # express the regexp above with the code you wish you had
+  @messenger.string.split("\n").should include(' == ' + menu + ' == ')  
 end
 
-When /^I choose A$/ do
-  pending # express the regexp above with the code you wish you had
+When /^I choose (.*)$/ do |choice|
+  @messenger.string.split(" ").should include(choice)
+  #input choice
+  @program.next(choice).should include(@program.current_menu.next_action)
 end
 
-Then /^I should launch antlers$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^I should (.*)$/ do |launch|
+pending
+  launch.split(" ").each do | word | 
+    @messenger.string.split(" ").should include(word)
+  end
+  #output results menu or formula
+  #if it's a menu, go to the next menu
+  #if it's an action, go to the next action
 end
 
