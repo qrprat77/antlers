@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__), "/../spec_helper")
 
 module Antlers
   describe Program do
-    context "Starting up" do 
+    describe "#start" do 
       before(:each) do
         @messenger = mock("messenger").as_null_object
         @program = Program.new(@messenger)
@@ -22,6 +22,23 @@ module Antlers
         @messenger.should_receive(:puts).with(" == Main Menu == ")
         @program.start
       end
-    end
-  end
+      
+    end #start
+    describe "#show_menu(menu)" do
+      before(:each) do
+        @messenger = mock("messenger").as_null_object
+        @program = Program.new(@messenger)
+        @menu = "Main Menu"
+        
+      end #before
+      
+      it "should create a new menu object" do 
+        @program.show_menu(@menu)
+        @program.current_menu.class.should == Antlers::Menu
+      end
+      
+      it "should display the current menu" 
+      
+    end #show_menu
+  end #describe program
 end

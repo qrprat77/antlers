@@ -14,5 +14,7 @@ module Antlers
       @current_menu = Antlers::Menu.new(menu)
       @current_menu.display_menu(@messenger)
     end
+    
+    
   end
 end
