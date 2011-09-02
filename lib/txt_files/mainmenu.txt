@@ -1,2 +1,3 @@
 A,Calculate Dimensions for Antennas,antennas,menu
+E,Edit this menu,edit_current_menu,action
 Q,Quit Antlers,quit,action
